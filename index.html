@@ -16,11 +16,47 @@
 		<!-- Firebase Reference -->
 		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
-		<script src="assets/css/style.css"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"></link> 
+
 		<title>RPS-Multiplayer</title>
 	</head>
 	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="navbar-brand mb-0 h1">Rock Paper Scissors Game</div>
+		</nav>
+		<div class="container">
+           
+			<div id="score-board">
+                <div class="column">
+                    <h3>Score:</h3>
+                </div>
+                    <div class="badge" id="player1">You: <span id="player1-score">0</span></div>
+                    <div class="badge" id="player2"> Other Player: <span id="player2-score">0</span>
+            </div></div>
+                   
+            <div class="result">Paper covers Rock! You win!</div>
+			<div class="choices">
+                <input type="image" src="assets/images/rock.png" alt="rock" id="rock" class="choice" />
+                <input type="image" src="assets/images/paper.png" alt="paper" id="paper" class="choice" />
+                <input type="image" src="assets/images/scissors.png" alt="scissors" id="scissors" class="choice" />
+			</div>
+		</div>
 		<!-- Script -->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
 		<script src="assets/javascript/logic.js"></script>
 	</body>
 </html>
