@@ -1,0 +1,16 @@
+create 3 choices (rock,paper, scissors) using images that the players can select (buttons)
+    - determine when a player has won/lost (paper beats rock, rock beats scissors, etc)
+            -or if it is a tie
+    -Have firebase store wins and losses
+    -Add points to score board 
+    -a message will display letting each player know who won/lost
+
+Create a scoreboard with both players scoreboard
+
+Allow only two players to play together 
+
+Create a chat for players to talk to each other
+    -form
+    -submit buttons
+    -time stamp
+    -Real time 

@@ -1,4 +1,4 @@
-#score-board {
+/* #score-board {
 	margin: 20px;
 	border: 2px solid grey;
 	text-align: center;
@@ -7,12 +7,12 @@
 	font-size: 25px;
 	padding: 15px 20px;
 	position: relative;
-}
+} */
 
-.badge {
+/* .badge {
 	background: rgb(167, 167, 165);
 	padding: 2px 10px;
-}
+} */
 
 #player1 {
 	color: rgb(145, 26, 26);

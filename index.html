@@ -25,16 +25,31 @@
 			<div class="navbar-brand mb-0 h1">Rock Paper Scissors Game</div>
 		</nav>
 		<div class="container">
+
+			<div class="score-board">
+				<div class="row">
+					<div class="col-sm-6">
+					  <div class="card">
+						<div class="card-body">
+						  <h5 class="card-title"><span id="player1-name">Player One</span></h5>
+						  <p class="card-text">Wins: <span id="player1-WinScore"></span></p>
+						  <p class="card-text">Losses: <span id="player1-LoseScore"></span></p>
+						</div>
+					  </div>
+					</div>
+					<div class="col-sm-6">
+					  <div class="card">
+						<div class="card-body">
+						  <h5 class="card-title"><span id="player2-name">Player Two</span></h5>
+						  <p class="card-text">Wins: <span id="player2-WinScore"></span></p>
+						  <p class="card-text">Losses: <span id="player2-LoseScore"></span></p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+			</div>
            
-			<div id="score-board">
-                <div class="column">
-                    <h3>Score:</h3>
-                </div>
-                    <div class="badge" id="player1">You: <span id="player1-score">0</span></div>
-                    <div class="badge" id="player2"> Other Player: <span id="player2-score">0</span>
-            </div></div>
-                   
-            <div class="result">Paper covers Rock! You win!</div>
+            <div class="result"></div>
 			<div class="choices">
                 <input type="image" src="assets/images/rock.png" alt="rock" id="rock" class="choice" />
                 <input type="image" src="assets/images/paper.png" alt="paper" id="paper" class="choice" />
