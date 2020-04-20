@@ -27,20 +27,56 @@ function win(player1Choice, player2Choice) {
 	player2LoseScore++;
 	document.getElementById("player1-WinScore").innerHTML = player1WinScore;
 	document.getElementById("player2-LoseScore").innerHTML = player2LoseScore;
-	document.querySelector(".result").innerHTML =
-		player1Choice + " beats " + player2Choice + "!";
+	document.querySelector(".result").style.display = "block";
+	document.querySelector(".result").innerHTML = (
+		player1Choice +
+		" beats " +
+		player2Choice +
+		"!"
+	).toUpperCase();
+	document.getElementById(player1Choice).classList.add("blue-glow");
+	setTimeout(function () {
+		document.getElementById(player1Choice).classList.remove("blue-glow");
+		document.querySelector(".result").style.display = "none";
+		document.getElementById("action-message").style.display = "block";
+	}, 4000);
 }
 
-function lose() {
+function lose(player1Choice, player2Choice) {
+	//move data to firebase
 	player1LoseScore++;
 	player2WinScore++;
 	document.getElementById("player1-LoseScore").innerHTML = player1WinScore;
 	document.getElementById("player2-WinScore").innerHTML = player2LoseScore;
-	console.log(player1WinScore);
+	document.querySelector(".result").style.display = "block";
+	document.querySelector(".result").innerHTML = (
+		player2Choice +
+		" beats " +
+		player1Choice +
+		"!"
+	).toUpperCase();
+	document.getElementById(player2Choice).classList.add("green-glow");
+	setTimeout(function () {
+		document.getElementById(player2Choice).classList.remove("green-glow");
+		document.querySelector(".result").style.display = "none";
+		document.getElementById("action-message").style.display = "block";
+	}, 4000);
 }
 
-function tie() {
-	alert("tie");
+function tie(player1Choice, player2Choice) {
+	document.querySelector(".result").style.display = "block";
+	document.querySelector(".result").innerHTML = (
+		"Both of you picked " +
+		player2Choice +
+		"!" +
+		" It is a tie!"
+	).toUpperCase();
+	document.getElementById(player2Choice).classList.add("grey-glow");
+	setTimeout(function () {
+		document.getElementById(player2Choice).classList.remove("grey-glow");
+		document.querySelector(".result").style.display = "none";
+		document.getElementById("action-message").style.display = "block";
+	}, 4000);
 }
 
 function game(player1Choice) {
@@ -65,7 +101,11 @@ function game(player1Choice) {
 }
 
 function main() {
+	document.getElementById("action-message").innerHTML =
+		"Select Rock, Paper, or Scissors";
+
 	document.getElementById("rock").addEventListener("click", function () {
+		document.getElementById("action-message").style.display = "none";
 		game("rock");
 	});
 	document.getElementById("paper").addEventListener("click", function () {
