@@ -1,3 +1,19 @@
+#text-part {
+	margin-top: 50px;
+	padding: 20px;
+	background-color: rgb(14, 103, 155);
+	color: white;
+	font-size: 20px;
+	font-weight: 500;
+	border: 5px solid black;
+}
+
+#start-button {
+	color: rgb(14, 103, 155);
+	font-weight: 700;
+	border: 2px solid black;
+}
+
 .card {
 	margin-top: 5px;
 	border: 2px solid grey;
@@ -13,6 +29,7 @@
 .result {
 	margin-top: 50px;
 	font-weight: 700;
+	font-size: 20px;
 }
 
 #action-message {

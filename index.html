@@ -21,11 +21,30 @@
 		<title>RPS-Multiplayer</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-dark bg-dark">
-			<div class="navbar-brand mb-0 h1">Rock Paper Scissors Game</div>
+		<nav class="navbar navbar-dark" style="background-color: rgb(14, 104, 155);">
+			<a class="navbar-brand mb-0 h1" href="#">
+				<img src="/assets/images/rock.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				Rock Paper Scissors Game</a>
 		</nav>
 		<div class="container">
-
+		<div id="start-menu">
+				<div id="text-part">
+					<p>Welcome to the Rock, Paper, Scissors Game!<br><span class="instructions"> Please fill out the information below to get started:</span></p>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Player Name</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<small id="emailHelp" class="form-text" style="font-size: 15px;" >The Other Player Will See Your Name.</small>
+					</div>
+					<button type="button" class="btn btn-light" id="start-button">Start Game</button>
+				</div>
+				<figure class="figure">
+					<img id="start-image" src="/assets/images/startMenu.png" class="figure-img img-fluid rounded" alt="...">
+			</div>
+		</div>
+		
+		<div class="container">
+			
+			<div id="game">
 			<div class="score-board">
 				<div class="row">
 					<div class="col-sm-6">
@@ -55,8 +74,9 @@
 					<input type="image" src="assets/images/paper.png" alt="paper" id="paper" class="choice" />
 					<input type="image" src="assets/images/scissors.png" alt="scissors" id="scissors" class="choice" />
 				</div>
-				<div display="block" id="action-message"></div>
+				<div display="none" id="action-message"></div>
 			</div>
+		</div>
 		</div>
 		<!-- Script -->
 		<script
