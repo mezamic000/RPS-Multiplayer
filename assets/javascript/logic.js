@@ -1,4 +1,3 @@
-// Initialize Firebase
 var config = {
 	apiKey: "AIzaSyCkLG54wYFrjtH29Sv_6tUIHOnPogOAesk",
 	authDomain: "rock-c8d5c.firebaseapp.com",
@@ -6,20 +5,16 @@ var config = {
 	projectId: "rock-c8d5c",
 	storageBucket: "rock-c8d5c.appspot.com",
 };
-
 firebase.initializeApp(config);
 
 var dataRef = firebase.database();
-
-function createUserName() {
-	//code here
-}
 
 var choices = ["rock", "paper", "scissors"];
 var player1WinScore = 0;
 var player2WinScore = 0;
 var player1LoseScore = 0;
 var player2LoseScore = 0;
+var displayName = document.querySelector("userName");
 
 function startMenu() {
 	$("#start-menu").show();
@@ -31,11 +26,21 @@ function startMenu() {
 startMenu();
 
 document.getElementById("start-button").addEventListener("click", function () {
+	event.preventDefault();
 	$("#start-menu").hide(); //change line the next 5 lines to Vanilla Javascript
 	$("#start-image").hide();
 	$(".score-board").show();
 	$(".choices").show();
 	$("#action-message").show();
+
+	//get input
+	name = document.getElementById("inputName").value;
+	name.toString().trim();
+
+	dataRef.ref().set({
+		name: name,
+	});
+
 	main();
 });
 

@@ -14,3 +14,10 @@ Create a chat for players to talk to each other
     -submit buttons
     -time stamp
     -Real time 
+
+turn computer (player 2) into another real person
+    -config firebase
+    -get scoring to go into firebase 
+    -get username to go into firebase
+    -create entry for two people in firebase
+    

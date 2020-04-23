@@ -17,6 +17,8 @@
 		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css"></link> 
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
 		<title>RPS-Multiplayer</title>
 	</head>
@@ -26,24 +28,24 @@
 				<img src="/assets/images/rock.png" width="30" height="30" class="d-inline-block align-top" alt="">
 				Rock Paper Scissors Game</a>
 		</nav>
-		<div class="container">
-		<div id="start-menu">
+		<div class="container" id="start-menu">
+			<form id="signIn-menu">
 				<div id="text-part">
 					<p>Welcome to the Rock, Paper, Scissors Game!<br><span class="instructions"> Please fill out the information below to get started:</span></p>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Player Name</label>
-						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-						<small id="emailHelp" class="form-text" style="font-size: 15px;" >The Other Player Will See Your Name.</small>
+						<input type="email" class="form-control" id="inputName" aria-describedby="emailHelp">
 					</div>
-					<button type="button" class="btn btn-light" id="start-button">Start Game</button>
-				</div>
+				<button type="submit" class="btn btn-primary text-white" id="start-button">Start Game</button>
+			</form>
+			</div>
 				<figure class="figure">
 					<img id="start-image" src="/assets/images/startMenu.png" class="figure-img img-fluid rounded" alt="...">
 			</div>
 		</div>
-		
+	
+			<!-- make this section mobile friendly -->
 		<div class="container">
-			
 			<div id="game">
 			<div class="score-board">
 				<div class="row">
@@ -95,5 +97,6 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="assets/javascript/logic.js"></script>
+		<script src="assets/javascript/firebase.js"></script>
 	</body>
 </html>
